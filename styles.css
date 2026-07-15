@@ -241,4 +241,14 @@ body {
   padding: 10px;
   cursor: pointer;
 }
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+.carousel img {
+  flex: none;
+  width: 100%;
+  scroll-snap-align: start;
+}
 
