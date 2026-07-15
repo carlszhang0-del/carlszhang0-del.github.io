@@ -93,14 +93,11 @@ body {
 }
 
 /* PRODUCTOS */
-.productos {
-    padding: 20px;
-}
-
 .prod-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
+    align-items: stretch; /* fuerza que todas las columnas tengan la misma altura */
 }
 
 .prod {
@@ -109,18 +106,36 @@ body {
     border-radius: 8px;
     text-align: center;
     border: 1px solid #0d0f14;
+    display: flex;              /* usamos flexbox dentro de cada tarjeta */
+    flex-direction: column;     /* elementos en columna */
+    justify-content: space-between; /* distribuye contenido para que botón quede abajo */
+    height: 100%;               /* ocupa toda la altura disponible */
 }
 
 .prod img {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.prod h3 {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.descripcion {
+    flex-grow: 1; /* hace que la descripción se expanda y empuje el botón hacia abajo */
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0;
 }
 
 .precio {
     color: #ff7b00;
     font-size: 18px;
     font-weight: bold;
+    margin: 10px 0;
 }
 
 .prod button {
@@ -130,6 +145,7 @@ body {
     width: 100%;
     border-radius: 6px;
     cursor: pointer;
+    margin-top: auto; /* asegura que el botón siempre quede al final */
 }
 
 /* FOOTER */
