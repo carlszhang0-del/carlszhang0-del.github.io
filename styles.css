@@ -204,4 +204,16 @@ body {
     .prod-grid {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
+            .whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  z-index: 100;
+}
+.whatsapp-float img {
+  width: 100%;
+  border-radius: 50%;
+}
 }
