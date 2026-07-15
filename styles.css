@@ -224,3 +224,21 @@ body {
   border-radius: 50%;
 }
 }
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+}
+#contact-form input, #contact-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+#contact-form button {
+  background-color: #ff6600;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
