@@ -46,23 +46,21 @@ function registrar() {
         return;
     }
 
-    // OBTENER LISTA DE USUARIOS
+    // OBTENER USUARIOS EXISTENTES
     let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 
-    // VERIFICAR SI EL CORREO YA EXISTE
-    let existe = usuarios.some(u => u.email === email);
+    // VERIFICAR SI YA EXISTE EL CORREO
+    let existe = usuarios.find(u => u.email === email);
     if (existe) {
         alert("Este correo ya está registrado");
         return;
     }
 
-    // AGREGAR NUEVO USUARIO
+    // GUARDAR NUEVO USUARIO
     usuarios.push({ email: email, pass: pass });
-
-    // GUARDAR LISTA ACTUALIZADA
     localStorage.setItem("usuarios", JSON.stringify(usuarios));
 
-    alert("Cuenta creada con éxito");
+    alert("Registro exitoso. Ahora puedes iniciar sesión.");
     window.location.href = "login.html";
 }
 
