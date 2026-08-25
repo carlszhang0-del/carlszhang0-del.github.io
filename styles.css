@@ -251,4 +251,42 @@ body {
   width: 100%;
   scroll-snap-align: start;
 }
+/* Todas las imágenes se adaptan al ancho disponible */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block; /* evita espacios extra */
+}
 
+/* Ajuste específico para el logo en la navbar */
+.navbar .logo img {
+  max-height: 40px; /* mantiene proporción sin deformar */
+  width: auto;
+}
+
+/* Carrusel responsivo */
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+}
+
+.carousel img {
+  flex: 0 0 auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Productos en grid adaptable */
+.prod-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.prod img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
