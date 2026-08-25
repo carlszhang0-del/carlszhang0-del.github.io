@@ -290,3 +290,21 @@ img {
   height: auto;
   border-radius: 6px;
 }
+#contact-form {
+  display: flex;
+  flex-direction: row;   /* coloca los elementos en fila */
+  gap: 10px;             /* espacio entre cada campo */
+  align-items: center;   /* alinea verticalmente */
+  flex-wrap: wrap;       /* permite que se acomoden si no caben */
+}
+
+#contact-form input,
+#contact-form textarea,
+#contact-form button {
+  flex: 1;               /* cada elemento ocupa espacio proporcional */
+  min-width: 150px;      /* evita que se hagan demasiado pequeños */
+}
+
+#contact-form textarea {
+  resize: vertical;      /* mantiene opción de agrandar solo en vertical */
+}
